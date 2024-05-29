@@ -1,0 +1,20 @@
+name: Mettang action
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: echo1
+        run: echo "changed directory"
+
+      - name: 권한변경
+        run: echo "권한 변경됨"
+      
